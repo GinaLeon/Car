@@ -1,0 +1,57 @@
+
+#include <iostream>
+#include <string>
+#include <cstring>
+using namespace std;
+
+class cars {
+public:
+	string brand, model, name;
+	int year;
+	void getname() {
+		cout << "What is your name? ";
+		getline(cin,name);
+	}
+	void getbrand()
+	{
+		cout << "Please enter brand: ";
+		getline(cin, brand);
+	}
+	void getyear()
+	{
+		cout << "Please ender the year of said car: ";
+		cin >> year;
+	}
+	void getmodel() {
+		cout << "Enter model: ";
+		getline(cin, model);
+	}
+};
+int main()
+{
+	while (true) {
+		string a;
+
+		cars X;
+		X.getname();
+		X.getbrand();
+		X.getmodel();
+		X.getyear();
+
+
+		cout << "\n" <<
+			X.name <<
+			"'s car is a " <<
+			X.brand << " " <<
+			X.year << " " <<
+			X.model << "." << "\n";
+	
+		cout << "want to start over? ";
+		cin>>a;
+		if (a == "Yes"|| a == "y" || a == "Y")
+			continue;
+		else
+			return 0;
+	}
+}
+
